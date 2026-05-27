@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Переменные цветов */
+:root {
+  --orange-light: #FF8C42;
+  --orange-dark:  #FF6B35;
+  --white:        #FFFFFF;
+  --text-dark:    #1A1A1A;
+  --text-light:   #4b5563;
+  --border:       #FFE5D9;
+  --glass-bg:     rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --text-secondary: #6b7280;
+  --btn-shadow:   0 4px 16px rgba(244, 162, 97, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-image: radial-gradient(at 81.41585559577926% 87.24152011479555%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 1) 0%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 0) 100%), radial-gradient(at 27.325489547761283% 73.79934093135628%, hsla(12.000000000000002, 75.75757575757575%, 61.1764705882353%, 1) 0%, hsla(12.000000000000002, 75.75757575757575%, 61.1764705882353%, 0) 100%), radial-gradient(at 93.6572444855945% 1.4726311627847433%, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%), radial-gradient(at 75.2353388571488% 48.14849472457675%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 1) 0%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 0) 100%), radial-gradient(at 10.995361390066938% 17.215393127398826%, hsla(12.000000000000002, 75.75757575757575%, 61.1764705882353%, 1) 0%, hsla(12.000000000000002, 75.75757575757575%, 61.1764705882353%, 0) 100%), radial-gradient(at 98.29202156447458% 53.08145861590824%, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%), radial-gradient(at 35.757597791618714% 28.866688018981467%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 1) 0%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 0) 100%), radial-gradient(at 87.87554192602587% 28.350994031499443%, hsla(12.000000000000002, 75.75757575757575%, 61.1764705882353%, 1) 0%, hsla(12.000000000000002, 75.75757575757575%, 61.1764705882353%, 0) 100%), radial-gradient(at 69.21266343967773% 90.97332350371691%, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%), radial-gradient(at 94.63200547956538% 88.4201213723785%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 1) 0%, hsla(26.530612244897956, 86.98224852071009%, 66.86274509803923%, 0) 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Основная секция практики */
+.practice {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0 1.25rem;
+}
+
+/* Форма практики */
+#practiceForm {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 40px rgba(244, 162, 97, 0.16);
+  margin-bottom: 2rem;
+}
+
+/* Выбор практики */
+#practiceSelect {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  border: 2px solid var(--glass-border);
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  padding-right: 3rem;
+}
+
+#practiceSelect:focus {
+  outline: none;
+  border-color: var(--orange-light);
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.15);
+  background: var(--white);
+}
+
+/* Информация о практике */
+.meditation-info {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  min-height: 100px;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Заголовок по центру */
+.meditation-info h3,
+.meditation-info h4 {
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #E76F51;
+}
+
+.meditation-info p {
+  text-align: left;
+  margin: 0;
+  line-height: 1.6;
+}
+/* Заметки */
+#practiceNotes {
+  width: 100%;
+  min-height: 140px;
+  padding: 1.2rem;
+  border: 2px solid var(--glass-border);
+  border-radius: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+#practiceNotes:focus {
+  outline: none;
+  border-color: var(--orange-light);
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.15);
+  background: var(--white);
+}
+
+/* Кнопка старта */
+#startBtn {
+  width: 100%;
+  padding: 1.3rem 2rem;
+  background: linear-gradient(135deg, var(--orange-light), var(--orange-dark));
+  color: var(--white);
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(244, 162, 97, 0.24);
+  font-family: "Inter", sans-serif;
+}
+
+#startBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(244, 162, 97, 0.35);
+}
+
+#startBtn:active {
+  transform: translateY(-1px);
+}
+
+/* Аудио */
+.audio-mini {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 16px rgba(244, 162, 97, 0.12);
+}
+
+.audio-status {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Таймер */
+#timer {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.92), 
+    rgba(255, 255, 255, 0.75) 50%, 
+    rgba(255, 255, 255, 0.5));
+  backdrop-filter: blur(24px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 32px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 
+    0 24px 64px rgba(244, 162, 97, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  margin: 2rem auto;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Основной текст */
+#timeDisplay {
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  font-weight: 800;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+  background:  #812a15;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 1rem 0 2rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 
+    0 4px 12px rgba(216, 85, 58, 0.5),
+    0 0 48px rgba(244, 162, 97, 0.6);
+}
+
+
+#timerStatus {
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, 
+    #D8553A 0%,
+    #F4A261 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Кнопки */
+.timer-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.timer-btn {
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(244, 162, 97, 0.3);
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  color: #333;
+}
+
+
+/* Кнопка "Сохранить сессию" */
+.save-btn, button[type="submit"], .save-session {
+  background: linear-gradient(135deg, 
+    #D8553A 0%, 
+    #E76F51 50%, 
+    #F4A261 100%) !important;
+  color: #FFFFFF !important;
+  border: 2px solid rgba(231, 111, 81, 0.4) !important;
+  box-shadow: 
+    0 12px 32px rgba(231, 111, 81, 0.45),
+    0 0 0 1px rgba(231, 111, 81, 0.2) !important;
+  font-weight: 700 !important;
+}
+
+.save-btn:hover, button[type="submit"]:hover, .save-session:hover {
+  background: linear-gradient(135deg, 
+    #E76F51 0%, 
+    #F4A261 50%, 
+    #E76F51 100%) !important;
+  box-shadow: 
+    0 16px 40px rgba(231, 111, 81, 0.6),
+    0 0 0 1px rgba(231, 111, 81, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.save-btn:active, button[type="submit"]:active, .save-session:active {
+  transform: translateY(-1px) !important;
+  box-shadow: 
+    0 8px 24px rgba(231, 111, 81, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.save-btn:focus, button[type="submit"]:focus, .save-session:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 4px rgba(231, 111, 81, 0.3),
+    0 12px 32px rgba(231, 111, 81, 0.45) !important;
+}
+
+.save-btn::before, .save-session::before {
+  margin-right: 0.5rem;
+  font-size: 1.1em;
+}
+
+/* Анимация при нажатии */
+@keyframes savePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.save-btn:active::before, .save-session:active::before {
+  animation: savePulse 0.2s ease;
+}
+
+/* Мобильная версия */
+@media (max-width: 480px) {
+  .save-btn, button[type="submit"], .save-session {
+    padding: 1.2rem 2rem !important;
+    font-size: 1.1rem !important;
+  }
+}
+/* Кнопка "Старт" */
+#startBtn {
+  background: linear-gradient(135deg, 
+    #D8553A 0%, 
+    #E76F51 50%, 
+    #F4A261 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 
+    0 12px 32px rgba(216, 85, 58, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+#startBtn:hover {
+  box-shadow: 
+    0 16px 40px rgba(216, 85, 58, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#pauseBtn, #resumeBtn {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #E76F51 !important;
+  border: 2px solid rgba(231, 111, 81, 0.4) !important;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+#pauseBtn:hover, #resumeBtn:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  box-shadow: 
+    0 6px 20px rgba(231, 111, 81, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+}
+
+#resumeBtn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+  padding: 1rem 1.5rem !important;
+}
+
+#resumeBtn * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#resetBtn, #stopBtn {
+  background: linear-gradient(135deg, 
+    #C94530 0%, 
+    #D8553A 50%, 
+    #E76F51 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 12px 32px rgba(201, 69, 48, 0.45) !important;
+}
+
+#resetBtn:hover, #stopBtn:hover {
+  box-shadow: 0 16px 40px rgba(231, 111, 81, 0.55) !important;
+  transform: translateY(-2px);
+}
+
+#progressBar {
+  background: linear-gradient(90deg, 
+    #D8553A,
+    #E76F51, 
+    #F4A261);
+  box-shadow: 0 0 20px rgba(216, 85, 58, 0.7);
+}
+
+/* Мобильная версия */
+@media (max-width: 480px) {
+  .timer-controls {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+/* Подвал */
+footer {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-secondary);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 4rem;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .practice {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+  
+  #practiceForm {
+    padding: 2rem 1.5rem;
+  }
+  
+  #timeDisplay {
+    font-size: 3.5rem;
+  }
+  
+  .timer-controls {
+    flex-direction: column;
+  }
+  
+  .timer-btn {
+    width: 100%;
+  }
+  
+  .audio-mini {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+}

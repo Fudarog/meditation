@@ -1,0 +1,126 @@
+/* Импорт шрифта Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Переменные цветов */
+:root {
+    --orange-light: #FF8C42;
+    --orange-dark:  #FF6B35;
+    --white:        #FFFFFF;
+    --text-dark:    #1A1A1A; 
+    --text-light:   #4b5563;
+    --border:       #FFE5D9;
+    --glass-bg:     rgba(255, 255, 255, 0.8); 
+    --glass-border: rgba(255, 255, 255, 0.5);  
+    --text-secondary: #6b7280;
+    --btn-shadow:   0 4px 16px rgba(244, 162, 97, 0.16);
+}
+
+/* Сброс box-sizing */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-image: 
+        radial-gradient(at 81.41585559577926% 87.24152011479555%, hsla(26.53, 86.98%, 66.86%, 1) 0%, hsla(26.53, 86.98%, 66.86%, 0) 100%), 
+        radial-gradient(at 27.325489547761283% 73.79934093135628%, hsla(12, 75.76%, 61.18%, 1) 0%, hsla(12, 75.76%, 61.18%, 0) 100%), 
+        radial-gradient(at 93.6572444855945% 1.4726311627847433%, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%), 
+        radial-gradient(at 75.2353388571488% 48.14849472457675%, hsla(26.53, 86.98%, 66.86%, 1) 0%, hsla(26.53, 86.98%, 66.86%, 0) 100%), 
+        radial-gradient(at 10.995361390066938% 17.215393127398826%, hsla(12, 75.76%, 61.18%, 1) 0%, hsla(12, 75.76%, 61.18%, 0) 100%), 
+        radial-gradient(at 98.29202156447458% 53.08145861590824%, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%), 
+        radial-gradient(at 35.757597791618714% 28.866688018981467%, hsla(26.53, 86.98%, 66.86%, 1) 0%, hsla(26.53, 86.98%, 66.86%, 0) 100%), 
+        radial-gradient(at 87.87554192602587% 28.350994031499443%, hsla(12, 75.76%, 61.18%, 1) 0%, hsla(12, 75.76%, 61.18%, 0) 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+.incense-wrapper {
+    position: relative;
+    overflow: hidden;
+    contain: layout paint strict;
+    isolation: isolate;
+    margin-top: 50px;
+}
+
+/* Благовоние */
+.incense-box {
+    text-align: center;
+    margin-top: 50px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 1rem 2.5rem;
+    box-shadow: var(--btn-shadow);
+    max-width: 600px;
+    height: 480px;
+    margin: 0 auto;
+}
+
+.incense-box p {
+    color: var(--text-secondary);
+}
+
+/* Контейнер для наложения дыма */
+.incense-container {
+    position: relative; 
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Изображение благовония */
+#incenseImg {
+    width: 300px;
+    transition: transform 0.3s;
+    margin-top: 60px;
+}
+
+#smokeEffect {
+    display: none;
+    position: absolute;
+    top: -110px;
+    left: -60px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Кнопка "Поставить на алтарь" */
+#altarBtn {
+    display: none;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    background: linear-gradient(135deg, var(--orange-light), var(--orange-dark));
+    color: var(--white);
+    border: none;
+    border-radius: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--btn-shadow);
+    transition: all 0.3s ease;
+}
+
+#altarBtn:hover:not(:disabled) {
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+#altarBtn:disabled {
+    opacity: 0.7;
+}
+
+/* Подвал сайта */
+footer {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--text-secondary);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
